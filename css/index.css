@@ -1,0 +1,414 @@
+@charset "UTF-8";
+/* WILDCARD */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+/* Variable */
+/* mixin */
+/* Animation */
+/* slide de gauche à droite (notament pour l'apparition des cards -information- et -menu-) */
+.slide-in-left {
+  animation: slide-in-left 0.5s ease forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation-delay: calc(0.2s * var(--index));
+}
+
+@keyframes slide-in-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+/* Transition Icône favoris */
+.fav {
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px black;
+  color: white;
+  -webkit-background-clip: text;
+          background-clip: text;
+  transition: color 3.5s ease-out;
+}
+.fav:hover {
+  -webkit-text-stroke: white;
+  background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* General */
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0px auto;
+  max-width: 1440px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-family: Shrikhand, sans-serif;
+}
+
+h2, h3, p {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+}
+
+section {
+  padding: 20px;
+  background-color: #F7F7F7;
+}
+
+/* Footer */
+footer {
+  background-color: #131416;
+  color: #F7F7F7;
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+footer h2 {
+  font-family: shrikhand, sans-serif;
+  padding-bottom: 5px;
+}
+
+footer i {
+  padding-right: 10px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  footer {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    padding-right: 50px;
+    height: 6vw;
+  }
+  footer h2 {
+    font-size: 1rem;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-right: 35px;
+  }
+  footer li {
+    font-size: 1rem;
+  }
+}
+.operation {
+  background-color: rgb(255, 255, 255);
+}
+
+.logo {
+  width: 50%;
+  padding: 14px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dedede;
+  padding: 17px;
+  width: 100%;
+}
+
+form {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+}
+form i {
+  font-size: 1.2rem;
+  padding-right: 15px;
+}
+
+input {
+  border: none;
+  background-color: #dedede;
+  font-size: 1rem;
+  width: 100%;
+}
+
+/* LOADER */
+#loading-screen {
+  font-size: 0.7vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F7F7F7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 999;
+  animation: fade-out 0.1s 2.8s forwards;
+}
+
+.loading-element {
+  position: fixed;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.loading-icon {
+  font-size: 12vw;
+  font-weight: bolder;
+}
+
+.load {
+  position: fixed;
+  width: 50vw;
+  height: 50vw;
+  margin: 0;
+  border: double 10px #dedede;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  transition: all 0.5s ease-in;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* Intro */
+.intro {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 30vh;
+  padding: 35px 50px;
+}
+
+.intro p {
+  padding: 10px 0;
+}
+
+.intro button {
+  cursor: pointer;
+  border-radius: 2rem;
+  border: none;
+  padding: 10px 15px;
+  color: rgb(255, 255, 255);
+  font-size: 1.1rem;
+  margin-top: 10px;
+  box-shadow: 0 2px 10px 0 #7d7d7d;
+  background: linear-gradient(#9356DC, #FF79DA);
+}
+.intro button:hover, .intro button :active, .intro button :focus {
+  background: linear-gradient(#a16be0, #ff93e1);
+  box-shadow: 0 2px 10px 0 #525252;
+}
+
+/* Fonctionnement */
+.operation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30%;
+  flex-direction: column;
+  align-items: start;
+  gap: 15px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.step {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: flex-start;
+  gap: 10px;
+  height: 6vh;
+  background-color: #F7F7F7;
+  border-radius: 1rem;
+  box-shadow: 0 2px 10px 0 #d1d1d1;
+  cursor: pointer;
+}
+.step:hover .fa-solid {
+  color: #9356DC;
+}
+
+.number {
+  position: relative;
+  z-index: 99;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #F7F7F7;
+}
+
+/* Restaurant */
+.card {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  height: 65vw;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.restaurant {
+  background-size: 100%;
+  background-position: bottom;
+  border-radius: 20px 20px 0 0;
+  height: 175px;
+  height: 50vw;
+}
+.restaurant.rest__1 {
+  background-image: url(/src/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+}
+.restaurant.rest__2 {
+  background-image: url(/src/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-position: center -150px;
+}
+.restaurant.rest__3 {
+  background-image: url(/src/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.restaurant.rest__4 {
+  background-image: url(/src/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+
+.restaurants h2 {
+  padding-bottom: 15px;
+}
+
+.cards .new {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background-color: #5dd1b5;
+  width: 80px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.none {
+  display: none;
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px 15px 10px;
+  font-size: 3.7vw;
+}
+
+@media (min-width: 1024px) {
+  #loading-screen {
+    font-size: 1.4vw;
+  }
+  .operation {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+  .steps {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+  }
+  .step {
+    width: 30%;
+  }
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .card {
+    width: 47%;
+    height: 29vh;
+    margin-left: 15px;
+    margin-right: 5px;
+  }
+  .restaurant {
+    margin: 0;
+    height: 20vh;
+  }
+  .cardText {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=index.css.map */

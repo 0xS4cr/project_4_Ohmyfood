@@ -1,0 +1,18 @@
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+@mixin imgBack {
+    background-size: 100%;
+    background-position: bottom;
+    border-radius: 20px 20px 0 0;
+    height: 175px;
+  }
+  
+@mixin init {
+    padding: 0;
+    margin: 0;
+  }

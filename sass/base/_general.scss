@@ -1,0 +1,31 @@
+
+body {
+    background-color: $bodyColor;
+    margin: 0px auto;
+    max-width: 1440px;
+  }
+  
+header {
+    @include flex;
+    flex-direction: column;
+  }
+  
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+h1 {
+    @include init;
+    font-family: Shrikhand, sans-serif;
+  }
+
+h2, h3, p {
+    @include init;
+    font-family: Roboto, sans-serif;
+  }
+
+section {
+    padding: 20px;
+    background-color: $mainGround;
+  }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood |Accueil </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="load"></div>
+        <div class=loading-element>
+            <i class="fa-solid fa-utensils loading-icon"></i>
+            <h1>Ohmyfood</h1>
+        </div>
+    </div>
+<header>
+    <img class="logo" src="src/images/logo/ohmyfood@2x.svg" alt="">
+    <div class="location">
+        <form action="#" method="post">
+            <i class="fa-solid fa-location-dot"></i>
+            <label>
+                <input type="text" name="location" placeholder="Paris, Belleville">
+            </label>
+        </form>
+    </div>
+</header>
+<main>
+    <div class="mainContainer">
+        <section class="intro">
+            <h2>Réservez le menu qui vous convient </h2>
+            <p>Découvrez des restaurants d'exeption, sélectionnés par nos soins.</p>
+            <button>Explorer nos restaurants</button>
+        </section>
+        <section class="operation">
+            <h2>Fonctionnement</h2>
+            <div class="steps">
+            <article class="step slide-in-left" style="--index: 16;">
+                <p class="number">1</p>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <h4>Choisissez un restaurant</h4>
+            </article>
+            <article class="step slide-in-left" style="--index: 20;">
+                <p class="number">2</p>
+                <i class="fa-solid fa-list"></i>
+                <h4>Composez votre menu</h4>
+            </article>
+            <article class="step slide-in-left" style="--index: 24;">
+                <p class="number">3</p>
+                <i class="fa-solid fa-store"></i>
+                <h4>Dégustez au restaurant</h4>
+            </article>
+            </div>
+        </section>
+        <section class="restaurants">
+            <h2>Restaurants</h2>
+            <div class="cards">
+                <article class="card">
+                    <a href="laPaletteDuGout.html">
+                        <div class="restaurant rest__1">
+                            <p class="new">Nouveau</p>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="cardText">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <i class="fa-solid fa-heart fav"></i>
+                        </div>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="laNoteEnchantée.html">
+                        <div class="restaurant rest__2">
+                            <p class="new">Nouveau</p>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="cardText">
+                                <h3>La note enchantée</h3>
+                                <p>Charonne</p>
+                            </div>
+                            <i class="fa-solid fa-heart fav"></i>
+                        </div>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="aLaFrancaise.html">
+                        <div class="restaurant rest__3">
+                            <p class="new none">Nouveau</p>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="cardText">
+                                <h3>À la française</h3>
+                                <p>Cité Rouge</p>
+                            </div>
+                            <i class="fa-solid fa-heart fav"></i>
+                        </div>
+                    </a>
+                </article>
+                <article class="card">
+                    <a href="leDeliceDesSens.html">
+                        <div class="restaurant rest__4">
+                            <p class="new none">Nouveau</p>
+                        </div>
+
+                        <div class="card-content">
+                            <div class="cardText">
+                                <h3>Le délice des sens</h3>
+                                <p>Folie-Méricourt</p>
+                            </div>
+                            <i class="fa-solid fa-heart fav"></i>
+                        </div>
+                    </a>
+                </article>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+<footer>
+    <h2>OhMyfood</h2>
+    <ul>
+        <li><a href="#"><i class="fa-solid fa-utensils "></i> Proposer un restaurant</a></li>
+        <li><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
+        <li><a href="#"> Mentions légales</a></li>
+        <li><a href="mailto:contact@clementrenaud.fr">Contact</a></li>
+    </ul>
+</footer> 
+</body>
+</html>

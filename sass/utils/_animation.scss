@@ -1,0 +1,33 @@
+  /* slide de gauche à droite (notament pour l'apparition des cards -information- et -menu-) */
+
+  .slide-in-left {
+    animation: slide-in-left 0.5s ease forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation-delay: calc(0.2s * var(--index));
+  }
+  
+  @keyframes slide-in-left {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* Transition Icône favoris */
+
+  .fav{
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px black;
+    color: white;
+    background-clip: text;
+    transition: color 3.5s ease-out;
+    &:hover {
+      -webkit-text-stroke:white;
+      background: linear-gradient($priColor, $secColor);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+  }

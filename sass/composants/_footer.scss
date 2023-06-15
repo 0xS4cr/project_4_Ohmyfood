@@ -1,0 +1,47 @@
+footer {
+    background-color: #131416;
+    color: $mainGround;
+    padding: 10px;
+    font-size: 1rem;
+    width:100%
+}
+
+footer h2 {
+font-family: shrikhand, sans-serif;
+padding-bottom: 5px;
+}
+
+footer i{
+    padding-right: 10px;
+}
+
+footer ul {
+list-style: none;
+}
+
+@media (min-width: 1024px) {
+    footer {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      padding-right: 50px ;
+      height: 6vw;
+      
+  }
+  footer h2{
+    font-size: 1rem;
+  }
+  
+  footer ul{
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
+      padding-right: 35px;
+      
+  }
+  
+  footer li{
+    font-size: 1rem;
+  }
+  }
