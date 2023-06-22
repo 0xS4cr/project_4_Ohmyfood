@@ -234,7 +234,7 @@ section h2 {
   border-radius: 0 1rem 1rem 0;
 }
 
-.custom-article:hover .price-check {
+.custom-article:active .price-check {
   right: 0%;
 }
 
